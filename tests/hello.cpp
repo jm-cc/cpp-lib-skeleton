@@ -2,6 +2,6 @@
 
 int main(int argc, char const *argv[])
 {
-    cpp_lib_skeleton::hello_world();
+    cpp_lib_skeleton::helloWorld();
     return 0;
 }

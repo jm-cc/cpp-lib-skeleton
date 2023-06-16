@@ -2,7 +2,7 @@
 
 namespace cpp_lib_skeleton
 {
-void hello_world()
+void helloWorld()
 {
     std::cout << "Hello world !" << std::endl;
 }
