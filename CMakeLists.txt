@@ -20,3 +20,18 @@ add_subdirectory(src)
 
 enable_testing()
 add_subdirectory(tests)
+
+#Documentation
+option(ENABLE_DOC "Allow to build documentation" OFF)
+if (ENABLE_DOC)
+  find_package(Doxygen REQUIRED)
+  set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/doxygen/")
+  set(DOXYGEN_EXTRACT_ALL "YES")
+  set(DOXYGEN_EXTRACT_PRIVATE "YES")
+  set(DOXYGEN_RECURSIVE "YES")
+  set(DOXYGEN_VERBATIM_HEADERS "NO")
+  set(DOXYGEN_GENERATE_HTML "NO")
+  set(DOXYGEN_GENERATE_LATEX "NO")
+  set(DOXYGEN_GENERATE_XML "YES")  
+  doxygen_add_docs(doxygen src include)
+endif()
