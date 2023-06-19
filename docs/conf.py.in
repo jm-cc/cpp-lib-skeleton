@@ -1,6 +1,6 @@
 # -- Project information -----------------------------------------------------
 
-project = 'CppLibSkeleton'
+project = '@CMAKE_PROJECT_NAME@'
 
 # -- General configuration ---------------------------------------------------
 
@@ -11,8 +11,8 @@ extensions = ["breathe", "exhale"]
 
 # Configuration for the breathe extension
 # Which directory to read the Doxygen output from
-breathe_projects = {"CppLibSkeleton":"@CMAKE_CURRENT_BINARY_DIR@/doxygen/xml"}
-breathe_default_project = "CppLibSkeleton"
+breathe_projects = {"@CMAKE_PROJECT_NAME@":"@CMAKE_CURRENT_BINARY_DIR@/doxygen/xml"}
+breathe_default_project = "@CMAKE_PROJECT_NAME@"
 
 # Configuration for the exhale extensions
 exhale_args = {
