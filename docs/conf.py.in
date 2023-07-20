@@ -1,6 +1,6 @@
 # -- Project information -----------------------------------------------------
 
-project = '@CMAKE_PROJECT_NAME@'
+project = "@CMAKE_PROJECT_NAME@"
 
 # -- General configuration ---------------------------------------------------
 
@@ -11,7 +11,7 @@ extensions = ["breathe", "exhale"]
 
 # Configuration for the breathe extension
 # Which directory to read the Doxygen output from
-breathe_projects = {"@CMAKE_PROJECT_NAME@":"@CMAKE_CURRENT_BINARY_DIR@/doxygen/xml"}
+breathe_projects = {"@CMAKE_PROJECT_NAME@": "@CMAKE_CURRENT_BINARY_DIR@/doxygen/xml"}
 breathe_default_project = "@CMAKE_PROJECT_NAME@"
 
 # Configuration for the exhale extensions
@@ -23,5 +23,4 @@ exhale_args = {
 }
 
 # -- Options for HTML output -------------------------------------------------
-html_theme = 'bizstyle'
-
+html_theme = "bizstyle"
