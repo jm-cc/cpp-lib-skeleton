@@ -11,5 +11,5 @@ or theoretical guide of your library.
    :maxdepth: 2
 
    self
-   api/library_root
+   ../api/library_root
 

@@ -42,8 +42,8 @@ if (ENABLE_DOC)
   find_package(Sphinx REQUIRED)
   configure_file("${CMAKE_CURRENT_SOURCE_DIR}/docs/conf.py.in" "${CMAKE_CURRENT_BINARY_DIR}/docs/conf.py")
   add_custom_target(sphinx
-      COMMAND ${CMAKE_COMMAND} -E copy_directory 
-        "${CMAKE_CURRENT_SOURCE_DIR}/docs" "${CMAKE_CURRENT_BINARY_DIR}/docs"
+      COMMAND ${CMAKE_COMMAND} -E create_symlink
+        "${CMAKE_CURRENT_SOURCE_DIR}/docs/files" "${CMAKE_CURRENT_BINARY_DIR}/docs/files"
       COMMAND ${SPHINX_EXECUTABLE} -M html "${CMAKE_CURRENT_BINARY_DIR}/docs"
         "${CMAKE_CURRENT_BINARY_DIR}/sphinx"
       DEPENDS doxygen)
